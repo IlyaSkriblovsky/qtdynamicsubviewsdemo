@@ -17,6 +17,10 @@ class SubView(QtGui.QWidget):
 	def __init__(self):
 		QtGui.QWidget.__init__(self)
 		uic.loadUi("subview.ui", self)
+		self.pushButton.clicked.connect(self.buttonClicked)
+
+	def buttonClicked(self):
+		self.lineEdit.setText('clicked!')
 
 
 if __name__ == '__main__':
